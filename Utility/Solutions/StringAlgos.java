@@ -1,6 +1,6 @@
 package Solutions;
 
-public class Palindrome
+public class StringAlgos
 {
 	public static boolean isPalinIter( String s )
 	{
@@ -34,6 +34,6 @@ public class Palindrome
 		if( c.length <= 1 )
 			return true;
 		
-		return (c[start] == c[end]) && (palinHelper(c, start+1, end-1));
+		return (c[start] == c[end]) && palinHelper(c, start+1, end-1);
 	}
 }
