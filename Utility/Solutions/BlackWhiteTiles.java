@@ -1,4 +1,4 @@
-package ProblemInterfaces;
+package Solutions;
 
 import Collections.MutableEntry;
 
