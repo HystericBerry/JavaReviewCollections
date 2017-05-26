@@ -5,7 +5,7 @@ package Collections;
  * 
  * @author pkim7
  */
-public abstract class Entry
+public class Entry
 {
 	public Entry() {}
 	
