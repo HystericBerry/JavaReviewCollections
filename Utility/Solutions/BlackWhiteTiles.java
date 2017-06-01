@@ -1,12 +1,12 @@
 package Solutions;
 
-import Collections.MutableEntry;
+import Collections.Pair;
 
 public class BlackWhiteTiles
 {
-	public static MutableEntry naiveImpl( int TOTAL_WIDTH, int TILE_WIDTH )
+	public static Pair naiveImpl( int TOTAL_WIDTH, int TILE_WIDTH )
 	{
-		MutableEntry naive = new MutableEntry( 0, 0 );
+		Pair naive = new Pair( 0, 0 );
 		
 		if( TOTAL_WIDTH < TILE_WIDTH )
 			return naive;
@@ -24,9 +24,9 @@ public class BlackWhiteTiles
 		return naive;
 	}
 	
-	public static MutableEntry iterativeImpl( int TOTAL_WIDTH, int TILE_WIDTH )
+	public static Pair iterativeImpl( int TOTAL_WIDTH, int TILE_WIDTH )
 	{
-		MutableEntry iter = new MutableEntry( 0, 0 );
+		Pair iter = new Pair( 0, 0 );
 		int currWidth = 0;
 		
 		if( TOTAL_WIDTH > TILE_WIDTH )
@@ -53,15 +53,15 @@ public class BlackWhiteTiles
 		return iter;
 	}
 	
-	public static MutableEntry recursiveImpl( int totalWidth, int width )
+	public static Pair recursiveImpl( int totalWidth, int width )
 	{
-		MutableEntry recursive = new MutableEntry( 0, 0 );
+		Pair recursive = new Pair( 0, 0 );
 		recursive = recursiveImpl( totalWidth, width, recursive );
 		
 		return recursive;
 	}
 	
-	private static MutableEntry recursiveImpl( int totalWidth, int width, MutableEntry recursive )
+	private static Pair recursiveImpl( int totalWidth, int width, Pair recursive )
 	{
 		if( recursive.getKey() == 0 && width < totalWidth ) // Beginning case
 			recursive.setKey(recursive.getKey() + 1);

@@ -1,15 +1,8 @@
 package Collections;
 
-/**
- * This class represents a Mutable Pair
- * 
- * @author pkim7
- */
-public class Entry
+public class Pair
 {
-	public Entry() {}
-	
-	public Entry( Integer key, Integer value )
+	public Pair( Integer key, Integer value )
 	{
 		this.mKey = key;
 		this.mValue = value;

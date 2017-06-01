@@ -5,22 +5,6 @@ import java.util.List;
 public class Sort
 {
 	/**
-	 * Private exception, helper method that checks basic cases before performing 
-	 * any sort algorithm.
-	 * 
-	 * @param arr the List of elements to check exceptions
-	 */
-	private static void checkSort(  List<Integer> arr  )
-	{
-		if( arr == null )
-			throw new NullPointerException("Cannot sort a null array");
-		
-		// lists are already sorted for lists of size 0 or 1
-		if( arr.size() < 2 )
-			return;
-	}
-	
-	/**
 	 * Given an int array, the method sorts the array in O(N^2) time using
 	 * the insertion sort algorithm.
 	 * 
@@ -37,7 +21,11 @@ public class Sort
 	 */
 	public static void insertionSort( List<Integer> arr )
 	{
-		checkSort( arr );
+		if( arr == null )
+			throw new NullPointerException("Cannot sort a null array");
+		// lists are already sorted for lists of size 0 or 1
+		if( arr.size() < 2 )
+			return;
 		
 		// start at i = 1 to indicate a list of size 1 is already sorted.
 		for( int i = 1; i < arr.size(); ++i )
@@ -70,7 +58,11 @@ public class Sort
 	 */
 	public static void selectionSort( List<Integer> arr )
 	{
-		checkSort( arr );
+		if( arr == null )
+			throw new NullPointerException("Cannot sort a null array");
+		// lists are already sorted for lists of size 0 or 1
+		if( arr.size() < 2 )
+			return;
 		
 		// by the time you have reached target position = arr.size()-1, the last element 
 		// is already in the right place.
@@ -98,7 +90,11 @@ public class Sort
 	 */
 	public static void bubbleSort( List<Integer> arr )
 	{
-		checkSort( arr );
+		if( arr == null )
+			throw new NullPointerException("Cannot sort a null array");
+		// lists are already sorted for lists of size 0 or 1
+		if( arr.size() < 2 )
+			return;
 		
 		// shrinking optimization that reduced an exact O(N^2) to O( N(N-1)/2 )
 		for( int i = arr.size()-1; i > 0; --i )
@@ -118,21 +114,14 @@ public class Sort
 		}
 	}
 	
-	public static void mergeSort( List<Integer> arr )
-	{
-		checkSort( arr ); // TODO implement this later
-		
-	}
-	
 	public static void quickSort( List<Integer> arr )
 	{
-		checkSort( arr ); // TODO implement this later
+		if( arr == null )
+			throw new NullPointerException("Cannot sort a null array");
+		// lists are already sorted for lists of size 0 or 1
+		if( arr.size() < 2 )
+			return;
 		
-	}
-	
-	public static void heapSort( List<Integer> arr )
-	{
-		checkSort( arr ); // TODO implement this later
-		
+		// TODO implement this later
 	}
 }
